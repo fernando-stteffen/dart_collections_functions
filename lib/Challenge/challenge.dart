@@ -90,3 +90,9 @@ List<String> find(Set setPeople, String toFind) {
 
   return resultFinded;
 }
+
+class Console {
+  log(String text) {
+    print(text);
+  }
+}
