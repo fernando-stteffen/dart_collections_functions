@@ -50,11 +50,8 @@ void main() {
     var result = -1;
 
     if (age1 != null && age2 != null) {
-      result = (age1 < age2)
-          ? -1
-          : (age1 == age2)
-              ? 0
-              : 1;
+      if (age1 > age2) result = 1;
+      if (age1 == age2) result = 0;
     }
     return result;
   });
@@ -62,8 +59,6 @@ void main() {
   listToOrderFour.sort((name1, name2) {
     final age1 = int.parse(name1.split('|')[1]);
     final age2 = int.parse(name2.split('|')[1]);
-    var result = -1;
-    
     return age1.compareTo(age2);
   });
 
